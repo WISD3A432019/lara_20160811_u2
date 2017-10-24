@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 */
 
-Route::get('hello/{name}',function($name){
+Route::get('hello/{name?}',function($name = 'Everbody'){
 return'Hello,'.$name;
 });
