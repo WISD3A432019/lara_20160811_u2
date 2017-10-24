@@ -10,16 +10,13 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/*
+
 Route::get('/', function () {
-    return redirect ('welcome');
+    return view ('welcome');
 });
-*/
 
-Route::get('hello/{name?}',function($name = 'Everbody'){
+
+Route::get('hello/{name?}',['as' =>'hello.index',function($name = 'Everbody'){
 return'Hello,'.$name;
-});
+}]);
 
-Route::get('/',function(){
-
-});
