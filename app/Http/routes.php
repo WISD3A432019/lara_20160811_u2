@@ -20,3 +20,8 @@ Route::get('say/{name?}',['as' =>'hello.index',function($name = 'Everbody'){
 return'Hello,'.$name;
 }]);
 
+
+
+Route::get('dashboard',function(){
+	return'dashboard';
+});
