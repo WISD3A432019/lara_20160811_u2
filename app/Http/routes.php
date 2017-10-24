@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('hello/{name?}',['as' =>'hello.index',function($name = 'Everbody'){
+Route::get('say/{name?}',['as' =>'hello.index',function($name = 'Everbody'){
 return'Hello,'.$name;
 }]);
 
