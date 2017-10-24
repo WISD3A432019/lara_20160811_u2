@@ -20,8 +20,12 @@ Route::get('say/{name?}',['as' =>'hello.index',function($name = 'Everbody'){
 return'Hello,'.$name;
 }]);
 
-
-
 Route::get('dashboard',function(){
-	return'dashboard';
+		return'dashboard';
+});
+Route::group(['prefix'=>'admin'],function(){
+	Route::get('dashboard',function(){
+		return'admin dashboard';
+	});
+
 });
